@@ -1,8 +1,13 @@
 package rifqimuhammadaziz.reflection.data;
 
+import rifqimuhammadaziz.reflection.annotation.NotBlank;
+
 public class Person implements Nameable{
 
+    @NotBlank
     private String firstName;
+
+    @NotBlank(allowEmptyString = true)
     private String lastName;
 
     public Person() {
