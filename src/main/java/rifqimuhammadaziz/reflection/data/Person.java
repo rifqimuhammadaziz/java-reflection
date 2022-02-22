@@ -2,6 +2,8 @@ package rifqimuhammadaziz.reflection.data;
 
 import rifqimuhammadaziz.reflection.annotation.NotBlank;
 
+import java.util.List;
+
 public class Person implements Nameable{
 
     @NotBlank
@@ -13,12 +15,22 @@ public class Person implements Nameable{
     // primitive data type
     private int age;
 
+    private List<String> hobbies;
+
     public Person() {
     }
 
     public Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
+    }
+
+    public List<String> getHobbies() {
+        return hobbies;
+    }
+
+    public void setHobbies(List<String> hobbies) {
+        this.hobbies = hobbies;
     }
 
     public int getAge() {
